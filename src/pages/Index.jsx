@@ -81,71 +81,66 @@ const Index = () => {
         </TableBody>
       </Table>
 
-      <div className="grid grid-cols-4 gap-4">
-        <div>
-          <p className="text-sm font-medium mb-1">Shipping</p>
-          <div className="flex space-x-2">
-            <Input type="number" className="w-20" defaultValue={0} />
-            <Input type="number" className="w-20" defaultValue={0} />
+      <div className="space-y-4">
+        <div className="grid grid-cols-4 gap-4">
+          <div className="space-y-1">
+            <p className="text-sm font-medium">Shipping</p>
+            <Input type="number" defaultValue={0} />
+            <Input type="number" defaultValue={0} />
+          </div>
+          <div className="space-y-1">
+            <p className="text-sm font-medium">Handling</p>
+            <Input type="number" defaultValue={0} />
+            <Input type="number" defaultValue={0} />
+          </div>
+          <div className="space-y-1">
+            <p className="text-sm font-medium">Payment</p>
+            <Input type="number" defaultValue={0} />
+            <Input type="number" defaultValue={0} />
+          </div>
+          <div className="space-y-1">
+            <p className="text-sm font-medium">Other Discounts</p>
+            <Input type="number" defaultValue={0} />
           </div>
         </div>
-        <div>
-          <p className="text-sm font-medium mb-1">Handling</p>
-          <div className="flex space-x-2">
-            <Input type="number" className="w-20" defaultValue={0} />
-            <Input type="number" className="w-20" defaultValue={0} />
-          </div>
-        </div>
-        <div>
-          <p className="text-sm font-medium mb-1">Payment</p>
-          <div className="flex space-x-2">
-            <Input type="number" className="w-20" defaultValue={0} />
-            <Input type="number" className="w-20" defaultValue={0} />
-          </div>
-        </div>
-        <div>
-          <p className="text-sm font-medium mb-1">Other Discounts</p>
-          <Input type="number" className="w-20" defaultValue={0} />
-        </div>
-      </div>
 
-      <div className="grid grid-cols-3 gap-4">
-        <div>
-          <p className="text-sm font-medium mb-1">Type</p>
-          <Select defaultValue="AIRMEE">
-            <SelectTrigger className="w-full">
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="AIRMEE">AIRMEE</SelectItem>
-            </SelectContent>
-          </Select>
+        <div className="grid grid-cols-3 gap-4">
+          <div>
+            <p className="text-sm font-medium mb-1">Type</p>
+            <Select defaultValue="AIRMEE">
+              <SelectTrigger>
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="AIRMEE">AIRMEE</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+          <div>
+            <p className="text-sm font-medium mb-1">Type</p>
+            <Select defaultValue="DEFAULT">
+              <SelectTrigger>
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="DEFAULT">DEFAULT</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+          <div>
+            <p className="text-sm font-medium mb-1">Type</p>
+            <Select defaultValue="KLARNA">
+              <SelectTrigger>
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="KLARNA">KLARNA</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
         </div>
-        <div>
-          <p className="text-sm font-medium mb-1">Type</p>
-          <Select defaultValue="DEFAULT">
-            <SelectTrigger className="w-full">
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="DEFAULT">DEFAULT</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
-        <div>
-          <p className="text-sm font-medium mb-1">Type</p>
-          <Select defaultValue="KLARNA">
-            <SelectTrigger className="w-full">
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="KLARNA">KLARNA</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
-      </div>
 
-      <Button>Predict</Button>
+        <Button className="w-full">Predict</Button>
     </div>
   );
 };
