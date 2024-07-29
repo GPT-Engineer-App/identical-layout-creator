@@ -86,29 +86,31 @@ const Index = () => {
           {["Shipping", "Handling", "Payment"].map((section) => (
             <div key={section} className="space-y-2">
               <p className="text-sm font-medium">{section}</p>
-              <div className="flex items-center space-x-2">
-                <label className="w-16 text-sm">Revenue:</label>
-                <Input type="number" defaultValue={0} className="flex-grow" />
-              </div>
-              <div className="flex items-center space-x-2">
-                <label className="w-16 text-sm">Cost:</label>
-                <Input type="number" defaultValue={0} className="flex-grow" />
-              </div>
-              <div className="flex items-center space-x-2">
-                <label className="w-16 text-sm">Type:</label>
-                <Select defaultValue={section === "Shipping" ? "AIRMEE" : section === "Handling" ? "DEFAULT" : "KLARNA"} className="flex-grow">
-                  <SelectTrigger>
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value={section === "Shipping" ? "AIRMEE" : section === "Handling" ? "DEFAULT" : "KLARNA"}>
-                      {section === "Shipping" ? "AIRMEE" : section === "Handling" ? "DEFAULT" : "KLARNA"}
-                    </SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
             </div>
           ))}
+        </div>
+        <div className="space-y-2">
+          <div className="flex items-center space-x-2">
+            <label className="w-16 text-sm">Revenue:</label>
+            <Input type="number" defaultValue={0} className="flex-grow" />
+          </div>
+          <div className="flex items-center space-x-2">
+            <label className="w-16 text-sm">Cost:</label>
+            <Input type="number" defaultValue={0} className="flex-grow" />
+          </div>
+          <div className="flex items-center space-x-2">
+            <label className="w-16 text-sm">Type:</label>
+            <Select defaultValue="DEFAULT" className="flex-grow">
+              <SelectTrigger>
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="AIRMEE">AIRMEE</SelectItem>
+                <SelectItem value="DEFAULT">DEFAULT</SelectItem>
+                <SelectItem value="KLARNA">KLARNA</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
         </div>
 
         <div className="space-y-2">
