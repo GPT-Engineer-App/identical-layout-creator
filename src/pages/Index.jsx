@@ -82,62 +82,51 @@ const Index = () => {
       </Table>
 
       <div className="space-y-4">
-        <div className="grid grid-cols-4 gap-4">
-          <div className="space-y-1">
-            <p className="text-sm font-medium">Shipping</p>
-            <Input type="number" defaultValue={0} />
-            <Input type="number" defaultValue={0} />
-          </div>
-          <div className="space-y-1">
-            <p className="text-sm font-medium">Handling</p>
-            <Input type="number" defaultValue={0} />
-            <Input type="number" defaultValue={0} />
-          </div>
-          <div className="space-y-1">
-            <p className="text-sm font-medium">Payment</p>
-            <Input type="number" defaultValue={0} />
-            <Input type="number" defaultValue={0} />
-          </div>
-          <div className="space-y-1">
-            <p className="text-sm font-medium">Other Discounts</p>
-            <Input type="number" defaultValue={0} />
-          </div>
-        </div>
-
         <div className="grid grid-cols-3 gap-4">
-          <div>
-            <p className="text-sm font-medium mb-1">Type</p>
+          <div className="space-y-2">
+            <p className="text-sm font-medium">Shipping</p>
+            <Input type="number" defaultValue={0} placeholder="Revenue" />
+            <Input type="number" defaultValue={0} placeholder="Costs" />
             <Select defaultValue="AIRMEE">
               <SelectTrigger>
-                <SelectValue />
+                <SelectValue placeholder="Type" />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="AIRMEE">AIRMEE</SelectItem>
               </SelectContent>
             </Select>
           </div>
-          <div>
-            <p className="text-sm font-medium mb-1">Type</p>
+          <div className="space-y-2">
+            <p className="text-sm font-medium">Handling</p>
+            <Input type="number" defaultValue={0} placeholder="Revenue" />
+            <Input type="number" defaultValue={0} placeholder="Costs" />
             <Select defaultValue="DEFAULT">
               <SelectTrigger>
-                <SelectValue />
+                <SelectValue placeholder="Type" />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="DEFAULT">DEFAULT</SelectItem>
               </SelectContent>
             </Select>
           </div>
-          <div>
-            <p className="text-sm font-medium mb-1">Type</p>
+          <div className="space-y-2">
+            <p className="text-sm font-medium">Payment</p>
+            <Input type="number" defaultValue={0} placeholder="Revenue" />
+            <Input type="number" defaultValue={0} placeholder="Costs" />
             <Select defaultValue="KLARNA">
               <SelectTrigger>
-                <SelectValue />
+                <SelectValue placeholder="Type" />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="KLARNA">KLARNA</SelectItem>
               </SelectContent>
             </Select>
           </div>
+        </div>
+
+        <div className="space-y-2">
+          <p className="text-sm font-medium">Other Discounts</p>
+          <Input type="number" defaultValue={0} placeholder="Amount" />
         </div>
 
         <Button className="w-full">Predict</Button>
