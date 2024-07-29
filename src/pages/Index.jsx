@@ -141,6 +141,7 @@ const Index = () => {
         </div>
 
         <Button className="w-full">Predict</Button>
+      </div>
     </div>
   );
 };
